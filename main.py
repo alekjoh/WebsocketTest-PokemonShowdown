@@ -7,10 +7,18 @@ from constants import bot_challenger, bot_accepter
 
 
 async def accept_challenge():
+    if bot_accepter["log_path"]:
+        with open(bot_accepter["log_path"], "w") as f:
+            f.write("")
+            
     websocket = await Websocket.create(username=bot_accepter["username"], password=bot_accepter["password"], log_path=bot_accepter["log_path"])
     await websocket.accept_challenge()
 
 async def challenge_player(name):
+    if bot_challenger["log_path"]:
+        with open(bot_challenger["log_path"], "w") as f:
+            f.write("")
+    
     websocket = await Websocket.create(username=bot_challenger["username"], password=bot_challenger["password"], log_path=bot_challenger["log_path"])
     await asyncio.sleep(1)
     await websocket.challenge_player(name=name)
