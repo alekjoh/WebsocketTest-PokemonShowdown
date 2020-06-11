@@ -27,8 +27,6 @@ class Websocket():
         self.rqid = 0
         self.websocket = await websockets.connect(CONSTANSTS.websocket_uri)
 
-        self.random_messages = ["Idiot", "Nice move", "Ez", "I got this"]
-
         await self.connect()
         await self.login()
 
