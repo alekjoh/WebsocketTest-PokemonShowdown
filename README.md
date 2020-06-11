@@ -1,5 +1,5 @@
 # Websocket Test
-Simple Pokémon Showdown bot written in Python using websockets. The bot can play random genbattles given an opponents name. Currently the bot just chooses random moves until it loses/wins. Might add sensible decision making in the future.
+Simple Pokémon Showdown bot written in Python using websockets. The bot can play random genbattles given an opponents name. Currently the bot just chooses random moves until it loses/wins. Might add sensible decision making in the future. Note that this bot was made in a couple of hours with very little testing, there are bound to be bugs/flaws in it.
 
 ## How to use
 1 Install needed libraries (requests and websockets, the rest is probably included with Python).  
